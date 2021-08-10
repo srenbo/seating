@@ -1,0 +1,62 @@
+<div class="container h-100 w-100 background">
+  <div class="header d-flex justify-content-center">
+    Velkommen til siddeplads generatoren...
+  </div>
+  <div class="container generate-form">
+    <form>
+      <div class="row">
+        <div class="col">Hvor store skal grupperne være?</div>
+        <div class="col">
+          <input
+            class="group-size"
+            type="number"
+            name="groupSize"
+            [(ngModel)]="groupSize"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">Hvor tit skal der byttes plads?</div>
+        <div class="col">
+          <input
+            class="switch-every"
+            type="number"
+            name="switchEvery"
+            [(ngModel)]="switchEvery"
+          />
+          uge(r)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">Hvor mange uger vil du planlægge?</div>
+        <div class="col">
+          <input
+            class="switch-every"
+            type="number"
+            name="totalWeeks"
+            [(ngModel)]="totalWeeks"
+          />
+          uge(r)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">Navneliste (1 navn per linje):</div>
+        <div class="col">
+          <textarea name="namelist" [(ngModel)]="namelist"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <button
+            class="btn btn-dark"
+            type="button"
+            (click)="generateSeatingPlan()"
+          >
+            Generér siddeplan
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
